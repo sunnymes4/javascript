@@ -9,7 +9,7 @@
 function sayHello() {
     console.log(this, '******* points to window object 01 *******')
     function hello() {
-        console.log(this, '******* points to window object 02 *******')
+        console.log(this, '******* points to window object 02  *******')
     }
     hello();
 }

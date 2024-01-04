@@ -18,3 +18,18 @@
     which are called as DOM API's and which empowers the HTML and give some interactive fetures to HTML Nodes inside the web page.
 
 */
+
+const box = document.getElementById('box');
+const para = document.getElementsByTagName('p');
+
+const q = document.querySelector('#box > p');
+const btn2 = document.querySelector('.btn');
+
+btn2.addEventListener('click', () => {
+    q.style.backgroundColor = 'orange';
+    q.style.color = 'white';
+    q.style.fontSize = '20px';
+    box.style.backgroundColor = 'Green';
+    para.innerHTML = 'Hi'
+})
+
