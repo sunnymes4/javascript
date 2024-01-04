@@ -30,6 +30,14 @@ btn2.addEventListener('click', () => {
     q.style.color = 'white';
     q.style.fontSize = '20px';
     box.style.backgroundColor = 'Green';
-    para.innerHTML = 'Hi'
 })
+
+
+// Events and Event Handling
+
+// Callback functions
+// JS Functions are first class functions
+// First class functions can take another function as an argument.
+
+
 
