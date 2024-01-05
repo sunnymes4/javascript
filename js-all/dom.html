@@ -2,22 +2,62 @@
 <html>
     <head>
         <style>
-            div {
+            .container {
+                display: flex;
+                justify-content: space-evenly;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .container > div {
+                background-color: #f9f9f9;
+                width: 250px;
+                padding: 10px;
+                border: 1px solid #dfdfdf;
+            }
+            .change-color {
                 width: 100px;
                 height: 250px;
                 background-color: red;
             }
+            .hide {
+                visibility: hidden;
+            }
         </style>
     </head>
     <body>
+        <div class="container">
+            <div class="change-color">
+                <button class="btn">Change colors</button>
+                <div id="box">
+                    <p>Test query selector</p>
+                </div>
+            </div>
+    
+            <div class="adding-elm">
+                <button class="addEleBtn">Add List items</button>
+                <div>
+                    <ul></ul>
+                </div>
+            </div>
 
-        <button class="btn">Change colors</button>
-        <div id="box">
-            <p>Test query selector</p>
+            <div class="toggle">
+                <button class="toggleBtn">Hide/Show Me</button>
+                <div>
+                    <h2>This is heading can be toggled!</h2>
+                </div>
+            </div>
+
+            <div class="remove">
+                <button class="removeBtn">Remove Me</button>
+                <div>
+                    <h3>This is heading can be removed!</h3>
+                    <h3>Or this one</h3>
+                </div>
+            </div>
         </div>
-        <p>Paragraph 01</p>
-        <p>Paragraph 02</p>
         
-        <script src="dom.js"></script>
+
+        <script src="dom-event-handling.js"></script>
     </body>
 </html>
