@@ -1,0 +1,38 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    padding: 3rem;
+    min-height: 100vh;
+}
+
+#photoSec {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#content {
+    display: flex;
+}
+
+.box {
+    flex-grow: 1;
+    width:200px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.front {
+    width: 200px;
+    height: 200px;
+}
+
+.back {
+    width: 200px;
+    height: 200px;
+}

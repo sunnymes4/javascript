@@ -68,7 +68,7 @@ toggleBtn.addEventListener('click', () => {
 
 // todo -- innerHTML
 
-// todo -- event to hide/show element
+// todo -- event to remove element
 const removeBtn = document.querySelector('.removeBtn');
 const heading1 = document.querySelector('.remove > div');
 removeBtn.addEventListener('click', () => {
