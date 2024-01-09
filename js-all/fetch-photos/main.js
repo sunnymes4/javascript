@@ -2,7 +2,7 @@ const btn1 = document.querySelector('.btn1');
 const btn2 = document.querySelector('.btn2');
 
 const card1 = document.querySelector('#photoSec');
-const card2 = document.querySelector('.single-card');
+const card2 = document.querySelector('#wrapper');
 
 const fetchData1 = async () => {
     try {
@@ -34,16 +34,27 @@ const fetchData2 = async () => {
         console.log(mainData);
         mainData.map(item => {
             // flip photo gallery
+            const singleCard = document.createElement('div');
             const frontBox = document.createElement('div');
-            frontBox.classList.add('front');
-            frontBox.style.backgroundImage = item.url;
-
             const backBox = document.createElement('div');
+            const bgImg = document.createElement('img');
+
+            bgImg.src = item.url;
+            bgImg.width = '200';
+            bgImg.height = '200';
+
+            frontBox.append(bgImg);
+
+            singleCard.classList.add('single-card');
+            frontBox.classList.add('front');
             backBox.classList.add('back');
-            backBox.innerHTML = `<h3>${item.title}</h3><br/><img src='${item.thumbnailUrl}'/>`;
+
+            backBox.innerHTML = `<h3>${item.title}</h3><br/><img src='${item.thumbnailUrl}' style='width: 100px'/>`;
             
-            card2.append(frontBox);
-            card2.append(backBox);
+            singleCard.append(frontBox);
+            singleCard.append(backBox);
+
+            card2.append(singleCard);
 
         })
     } catch(error) {

@@ -36,3 +36,18 @@ body {
     width: 200px;
     height: 200px;
 }
+
+#wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    column-gap: 10px;
+}
+
+.single-card {
+    background-color: #efefef;
+    padding: 5px;
+    border: 1px solid #d4d4d4;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
