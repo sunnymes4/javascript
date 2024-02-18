@@ -23,12 +23,28 @@ function addListner() {
         }
     })
 
-    starWrapper.addEventListener('mouseover', () => {
-        
+    starWrapper.addEventListener('mouseover', (e) => {
+        const target = e.target;
+        if(target.classList.contains('fa-star')) {
+            const newItem = target.getAttribute('data-id');
+            //result.innerHTML = currentIdx
+            changeColor(newItem);
+        }
     })
+
+    starWrapper.addEventListener('mouseleave', (e) => {
+        //const target = e.target.getAttribute('data-id');
+        changeColor(currentIdx);
+    })
+
+    // starWrapper.addEventListener('mouseover', (e) => {
+    //     const target = e.target.getAttribute('data-id');
+    //     changeColor(target);
+    // })
 }
 
 // mouseover
+
 
 // mouseremove/mouseleave
 
