@@ -3,16 +3,16 @@
 // >> star wrapper
 const starWrapper = document.querySelector('.stars');
 
-// >> star icon
-
 // >> rating result
 const result = document.querySelector('.rating-result i span');
 
 
-// Methods
 let currentIdx = 0;
 
-// click event
+
+// Methods
+
+// click event to set the selected stars
 function addListner() {
     starWrapper.addEventListener('click', (e) => {
         const target = e.target;
@@ -23,33 +23,23 @@ function addListner() {
         }
     })
 
+    // on mouseover change the color states
     starWrapper.addEventListener('mouseover', (e) => {
         const target = e.target;
         if(target.classList.contains('fa-star')) {
             const newItem = target.getAttribute('data-id');
-            //result.innerHTML = currentIdx
             changeColor(newItem);
         }
     })
 
     starWrapper.addEventListener('mouseleave', (e) => {
-        //const target = e.target.getAttribute('data-id');
+        // on mouseleave get the last selected star and set it
         changeColor(currentIdx);
     })
-
-    // starWrapper.addEventListener('mouseover', (e) => {
-    //     const target = e.target.getAttribute('data-id');
-    //     changeColor(target);
-    // })
 }
 
-// mouseover
 
-
-// mouseremove/mouseleave
-
-// toggelStars
-
+// change the stars color function
 function changeColor(currentIdx) {
     let stars = document.querySelectorAll('.stars .star i');
     stars.forEach((element, idx) => {
