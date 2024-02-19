@@ -1,0 +1,40 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100dvh;
+    min-height: 100vh;
+    padding: 3rem;
+    background: url('https://images.pexels.com/photos/2884498/pexels-photo-2884498.jpeg') no-repeat center;
+}
+
+h1 {
+    text-align: center;
+    margin-block: 1rem;
+}
+
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.form-wrapper input {
+    border: none;
+    padding: 0.5rem;
+    border-radius: 0.2rem;
+    flex-basis: 300px;
+}
+
+.form-wrapper button {
+    border: none;
+    border-radius: 0.2rem;
+    background-color: rgb(40, 40, 40);
+    padding-inline: 0.5rem;
+    color:rgb(234, 170, 8);
+    font-weight:600;
+}
